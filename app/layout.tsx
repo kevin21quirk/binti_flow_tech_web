@@ -2,6 +2,7 @@
 
 import { Inter } from 'next/font/google'
 import { usePathname } from 'next/navigation'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import './globals.css'
 import Navigation from '@/components/Navigation'
@@ -16,7 +17,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
-  const isProposalPage = pathname === '/investors/proposal'
+  const [isProposalPage, setIsProposalPage] = useState(false)
+
+  useEffect(() => {
+    setIsProposalPage(pathname === '/investors/proposal')
+  }, [pathname])
 
   return (
     <html lang="en" className="scroll-smooth">
