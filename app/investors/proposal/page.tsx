@@ -77,7 +77,7 @@ export default function InvestmentProposal() {
   const CurrentSlideComponent = slides[currentSlide]
 
   return (
-    <main className="relative w-full h-screen overflow-hidden bg-white">
+    <main className="fixed inset-0 w-full h-screen overflow-hidden bg-white z-[9999]">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
