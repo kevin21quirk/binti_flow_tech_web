@@ -58,6 +58,20 @@ export default function InvestmentProposal() {
     }
   }, [isAuthenticated, user, router])
 
+  useEffect(() => {
+    // Hide header and footer when component mounts
+    const header = document.querySelector('header')
+    const footer = document.querySelector('footer')
+    if (header) header.style.display = 'none'
+    if (footer) footer.style.display = 'none'
+
+    // Show them again when component unmounts
+    return () => {
+      if (header) header.style.display = ''
+      if (footer) footer.style.display = ''
+    }
+  }, [])
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
