@@ -322,7 +322,7 @@ export default function ContactPage() {
                             <h3 className="text-sm font-semibold text-gray-400 mb-1">{info.title}</h3>
                             <a
                               href={info.link}
-                              className="text-white font-bold text-sm sm:text-lg hover:text-binti-red transition-colors break-all"
+                              className="text-white font-bold text-xs sm:text-lg hover:text-binti-red transition-colors whitespace-nowrap"
                             >
                               {info.value}
                             </a>
