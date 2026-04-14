@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
+import SlideEnlargeWrapper from '@/components/ClickToEnlarge'
 import HeroSlide from '@/components/slides/HeroSlide'
 import VisionMissionSlide from '@/components/slides/VisionMissionSlide'
 import ProblemSlide from '@/components/slides/ProblemSlide'
@@ -88,7 +89,9 @@ export default function InvestmentProposal() {
             transition={{ duration: 0.5 }}
             className="w-full h-full"
           >
-            <CurrentSlideComponent />
+            <SlideEnlargeWrapper>
+              <CurrentSlideComponent />
+            </SlideEnlargeWrapper>
           </motion.div>
         </AnimatePresence>
       </div>
