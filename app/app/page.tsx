@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { Smartphone, Activity, Bell, Calendar, Heart, Shield, TrendingUp, Users } from 'lucide-react'
 
 export default function AppPage() {
@@ -92,16 +91,141 @@ export default function AppPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative w-full max-w-md mx-auto">
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/images/app-image.png"
-                    alt="Binti Health App Interface"
-                    width={400}
-                    height={800}
-                    className="w-full h-auto"
-                    priority
-                  />
+              <div className="relative w-full max-w-sm mx-auto">
+                {/* Phone Frame */}
+                <div className="relative bg-gray-100 rounded-[3rem] p-3 shadow-2xl">
+                  <div className="bg-white rounded-[2.5rem] overflow-hidden">
+                    {/* App Header */}
+                    <div className="bg-gradient-to-r from-purple-600 to-purple-700 px-4 py-4 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                          <div className="w-4 h-0.5 bg-white"></div>
+                          <div className="w-4 h-0.5 bg-white mt-1"></div>
+                          <div className="w-4 h-0.5 bg-white mt-1"></div>
+                        </div>
+                        <span className="text-white font-bold text-lg">Binti.</span>
+                        <span className="text-white/80 text-sm">Health</span>
+                      </div>
+                      <Bell className="w-5 h-5 text-white" />
+                    </div>
+
+                    {/* App Content */}
+                    <div className="p-4 space-y-4 bg-gray-50 h-[600px] overflow-y-auto">
+                      {/* Cycle Overview Card */}
+                      <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div className="bg-gradient-to-r from-pink-500 to-pink-600 px-4 py-3 flex items-center gap-2">
+                          <Calendar className="w-5 h-5 text-white" />
+                          <span className="text-white font-bold">Cycle Overview</span>
+                        </div>
+                        <div className="p-4">
+                          <div className="w-12 h-12 bg-gray-200 rounded-lg mb-3"></div>
+                          <p className="text-sm text-gray-600 mb-3">Log your first period to see cycle predictions</p>
+                          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
+                            <span className="text-lg">+</span> ADD PERIOD
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Today's Insights Card */}
+                      <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div className="bg-gradient-to-r from-purple-600 to-purple-700 px-4 py-3 flex items-center gap-2">
+                          <TrendingUp className="w-5 h-5 text-white" />
+                          <span className="text-white font-bold">Today's Insights</span>
+                        </div>
+                        <div className="p-4">
+                          <div className="w-10 h-10 bg-gray-200 rounded-full mb-2"></div>
+                          <p className="text-sm font-semibold text-gray-800 mb-1">No insights yet</p>
+                          <p className="text-xs text-gray-500">Track your health to see personalized insights</p>
+                        </div>
+                      </div>
+
+                      {/* Quick Actions Card */}
+                      <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div className="bg-gradient-to-r from-purple-600 to-purple-700 px-4 py-3 flex items-center gap-2">
+                          <Activity className="w-5 h-5 text-white" />
+                          <span className="text-white font-bold">Quick Actions</span>
+                        </div>
+                        <div className="p-4">
+                          <div className="grid grid-cols-4 gap-3">
+                            <div className="flex flex-col items-center gap-2">
+                              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                                <Calendar className="w-6 h-6 text-white" />
+                              </div>
+                              <span className="text-xs text-gray-700 text-center">Track Period</span>
+                            </div>
+                            <div className="flex flex-col items-center gap-2">
+                              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center">
+                                <Heart className="w-6 h-6 text-white" />
+                              </div>
+                              <span className="text-xs text-gray-700 text-center">Log Pain</span>
+                            </div>
+                            <div className="flex flex-col items-center gap-2">
+                              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                                <Smartphone className="w-6 h-6 text-white" />
+                              </div>
+                              <span className="text-xs text-gray-700 text-center">Connect Device</span>
+                            </div>
+                            <div className="flex flex-col items-center gap-2">
+                              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center">
+                                <Users className="w-6 h-6 text-white" />
+                              </div>
+                              <span className="text-xs text-gray-700 text-center">Community</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Upcoming Card */}
+                      <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div className="bg-gradient-to-r from-purple-600 to-purple-700 px-4 py-3 flex items-center gap-2">
+                          <Bell className="w-5 h-5 text-white" />
+                          <span className="text-white font-bold">Upcoming</span>
+                        </div>
+                        <div className="p-4">
+                          <div className="w-10 h-10 bg-gray-200 rounded-lg mb-2"></div>
+                          <p className="text-sm font-semibold text-gray-800 mb-1">No upcoming events yet</p>
+                          <p className="text-xs text-gray-500">Track your period to see predictions</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bottom Navigation */}
+                    <div className="bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between">
+                      <div className="flex flex-col items-center gap-1">
+                        <div className="w-6 h-6 text-purple-600">
+                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                        </div>
+                        <span className="text-xs text-purple-600 font-semibold">Home</span>
+                      </div>
+                      <div className="flex flex-col items-center gap-1">
+                        <Calendar className="w-6 h-6 text-gray-400" />
+                        <span className="text-xs text-gray-400">Period</span>
+                      </div>
+                      <div className="flex flex-col items-center gap-1">
+                        <TrendingUp className="w-6 h-6 text-gray-400" />
+                        <span className="text-xs text-gray-400">Insights</span>
+                      </div>
+                      <div className="flex flex-col items-center gap-1">
+                        <Activity className="w-6 h-6 text-gray-400" />
+                        <span className="text-xs text-gray-400">Leads</span>
+                      </div>
+                      <div className="flex flex-col items-center gap-1">
+                        <Users className="w-6 h-6 text-gray-400" />
+                        <span className="text-xs text-gray-400">Community</span>
+                      </div>
+                      <div className="flex flex-col items-center gap-1">
+                        <Smartphone className="w-6 h-6 text-gray-400" />
+                        <span className="text-xs text-gray-400">Connect</span>
+                      </div>
+                    </div>
+
+                    {/* Floating Action Button */}
+                    <div className="absolute bottom-20 right-6">
+                      <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full shadow-lg flex items-center justify-center">
+                        <span className="text-white text-3xl font-light">+</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
