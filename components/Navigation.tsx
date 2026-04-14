@@ -142,7 +142,7 @@ function Navigation() {
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               className="fixed top-20 right-0 bottom-0 w-80 bg-gradient-to-br from-white via-gray-50 to-binti-red/5 shadow-2xl z-50 md:hidden overflow-y-auto"
             >
-              <div className="p-6 pb-32 space-y-2">
+              <div className="p-6 pb-40 space-y-2">
                 {navItems.map((item, index) => {
                   const Icon = item.icon
                   return item.hasDropdown ? (
