@@ -78,18 +78,20 @@ export default function InvestmentProposal() {
 
   return (
     <main className="fixed inset-0 w-full h-screen overflow-hidden bg-white z-[9999]">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentSlide}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-          className="w-full h-full"
-        >
-          <CurrentSlideComponent />
-        </motion.div>
-      </AnimatePresence>
+      <div className="w-full h-full" style={{ transform: 'scale(0.75)', transformOrigin: 'top left', width: '133.33%', height: '133.33%' }}>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <CurrentSlideComponent />
+          </motion.div>
+        </AnimatePresence>
+      </div>
 
       <button
         onClick={prevSlide}
