@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Smartphone, Activity, Bell, Calendar, Heart, Shield, TrendingUp, Users } from 'lucide-react'
 
 export default function AppPage() {
@@ -92,9 +93,15 @@ export default function AppPage() {
               className="relative"
             >
               <div className="relative w-full max-w-md mx-auto">
-                <div className="absolute inset-0 bg-white" />
-                <div className="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
-                  <Smartphone className="w-full h-96 text-gray-400" />
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/app image.png"
+                    alt="Binti Health App Interface"
+                    width={400}
+                    height={800}
+                    className="w-full h-auto"
+                    priority
+                  />
                 </div>
               </div>
             </motion.div>
