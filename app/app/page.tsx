@@ -95,7 +95,7 @@ export default function AppPage() {
               <div className="relative w-full max-w-md mx-auto">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/app image.png"
+                    src="/images/app-image.png"
                     alt="Binti Health App Interface"
                     width={400}
                     height={800}
