@@ -104,9 +104,18 @@ function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden relative w-12 h-12 rounded-xl bg-gradient-to-br from-binti-red to-red-600 hover:from-red-600 hover:to-red-700 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <motion.div
+              animate={isOpen ? { rotate: 180 } : { rotate: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {isOpen ? (
+                <X className="w-6 h-6 text-white" />
+              ) : (
+                <Menu className="w-6 h-6 text-white" />
+              )}
+            </motion.div>
           </button>
         </div>
       </div>
@@ -133,7 +142,7 @@ function Navigation() {
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               className="fixed top-20 right-0 bottom-0 w-80 bg-gradient-to-br from-white via-gray-50 to-binti-red/5 shadow-2xl z-50 md:hidden overflow-y-auto"
             >
-              <div className="p-6 space-y-2">
+              <div className="p-6 pb-32 space-y-2">
                 {navItems.map((item, index) => {
                   const Icon = item.icon
                   return item.hasDropdown ? (
