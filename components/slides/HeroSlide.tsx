@@ -26,7 +26,7 @@ export default function HeroSlide() {
         transition={{ duration: 0.8 }}
         className="relative z-10 w-11/12 md:w-4/5 lg:w-3/4 mx-auto px-4 md:px-0"
       >
-        <div className="bg-gradient-to-r from-binti-purple to-binti-magenta p-8 md:p-12 lg:p-20 rounded-3xl shadow-2xl">
+        <div className="bg-gradient-to-r from-red-700 to-red-500 p-8 md:p-12 lg:p-20 rounded-3xl shadow-2xl">
           <div className="text-center">
             <div className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-4">Binti.</div>
             <div className="text-3xl md:text-4xl lg:text-5xl text-white/90">Flow. Tech.</div>
