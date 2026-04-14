@@ -50,7 +50,7 @@ const techFeatures = [
 
 export default function TechnologySlide() {
   return (
-    <div className="relative w-full h-full flex flex-col overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+    <div className="relative w-full min-h-full md:h-full flex flex-col overflow-y-auto md:overflow-hidden bg-gradient-to-br from-gray-50 to-white">
       <div className="absolute top-16 left-20 w-28 h-28 bg-gradient-to-br from-red-700 to-red-900 blob" />
       <div className="absolute top-20 left-1/3 w-32 h-32 bg-gradient-to-br from-red-600 to-red-800 blob" style={{ animationDelay: '6s' }} />
       <div className="absolute top-24 right-1/3 w-24 h-24 bg-gradient-to-br from-red-800 to-red-950 blob" style={{ animationDelay: '12s' }} />
@@ -64,7 +64,7 @@ export default function TechnologySlide() {
       <div className="absolute bottom-24 left-24 w-28 h-28 bg-gradient-to-br from-red-600 to-red-800 blob" style={{ animationDelay: '8s' }} />
       <div className="absolute bottom-28 right-1/3 w-24 h-24 bg-gradient-to-br from-red-800 to-red-950 blob" style={{ animationDelay: '11s' }} />
       
-      <div className="relative z-10 mx-auto px-4 md:px-8 lg:px-16 pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20 lg:pb-24 w-full h-full flex flex-col">
+      <div className="relative z-10 mx-auto px-3 md:px-8 lg:px-12 pt-10 md:pt-24 lg:pt-28 pb-20 md:pb-20 lg:pb-24 w-full flex flex-col">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ export default function TechnologySlide() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-4 grid grid-cols-3 gap-3"
+          className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3"
         >
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-3 border-2 border-blue-200">
             <div className="text-2xl font-bold text-blue-600 mb-1">8-12hrs</div>

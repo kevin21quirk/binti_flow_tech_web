@@ -45,6 +45,16 @@ body {
   z-index: 0;
 }
 
+/* Mobile responsive overrides for investment pitch slides */
+@media (max-width: 767px) {
+  .blob {
+    width: 3rem !important;
+    height: 3rem !important;
+    filter: blur(8px);
+    opacity: 0.15;
+  }
+}
+
 @keyframes float {
   0%, 100% {
     border-radius: 45% 55% 52% 48% / 48% 50% 50% 52%;

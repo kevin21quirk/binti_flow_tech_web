@@ -2,15 +2,15 @@ import { motion } from 'framer-motion'
 
 export default function ProfitabilitySlide() {
   return (
-    <div className="relative w-full h-full flex items-center overflow-hidden bg-white">
+    <div className="relative w-full min-h-full md:h-full flex items-center overflow-y-auto md:overflow-hidden bg-white">
       <div className="absolute top-0 left-0 w-[600px] h-full bg-gradient-to-r from-binti-magenta/10 to-transparent" />
       
-      <div className="relative z-10 mx-auto px-12 py-8 w-full h-full flex flex-col justify-center">
+      <div className="relative z-10 mx-auto px-4 md:px-12 py-8 w-full flex flex-col justify-center">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-8 text-gray-900"
+          className="text-2xl md:text-4xl font-bold mb-6 md:mb-8 text-gray-900"
         >
           Path to Profitability
         </motion.h2>

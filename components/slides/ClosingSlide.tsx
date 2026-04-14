@@ -3,19 +3,19 @@ import { Mail, Globe, Phone } from 'lucide-react'
 
 export default function ClosingSlide() {
   return (
-    <div className="relative w-full h-full flex flex-col justify-center items-center overflow-hidden bg-gradient-to-br from-binti-purple via-binti-magenta to-binti-cyan">
+    <div className="relative w-full min-h-full md:h-full flex flex-col justify-center items-center overflow-y-auto md:overflow-hidden bg-gradient-to-br from-binti-purple via-binti-magenta to-binti-cyan">
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 blob" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-white/10 blob" style={{ animationDelay: '2s' }} />
       <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-white/10 blob" style={{ animationDelay: '4s' }} />
       
-      <div className="relative z-10 w-full px-12 py-8 text-white">
+      <div className="relative z-10 w-full px-4 md:px-12 py-8 text-white">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-8"
         >
-          <h1 className="text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Let&apos;s Transform<br />Women&apos;s Health Together
           </h1>
           <p className="text-xl opacity-90 max-w-4xl mx-auto leading-relaxed">
@@ -31,7 +31,7 @@ export default function ClosingSlide() {
         >
           <h3 className="text-2xl font-bold mb-6 text-center">Get in Touch</h3>
           
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             <div className="flex flex-col items-center text-center">
               <div className="bg-white/20 p-4 rounded-2xl mb-3">
                 <Mail className="w-8 h-8" />

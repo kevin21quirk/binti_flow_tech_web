@@ -30,7 +30,7 @@ const advantages = [
 
 export default function CompetitiveAdvantageSlide() {
   return (
-    <div className="relative w-full h-full flex flex-col overflow-hidden bg-white">
+    <div className="relative w-full min-h-full md:h-full flex flex-col overflow-y-auto md:overflow-hidden bg-white">
       <div className="absolute top-0 right-0 w-[500px] h-full bg-gradient-to-l from-binti-cyan/10 to-transparent" />
       <div className="absolute top-16 left-20 w-28 h-28 bg-gradient-to-br from-red-700 to-red-900 blob" />
       <div className="absolute top-20 left-1/3 w-32 h-32 bg-gradient-to-br from-red-600 to-red-800 blob" style={{ animationDelay: '7s' }} />
@@ -45,7 +45,7 @@ export default function CompetitiveAdvantageSlide() {
       <div className="absolute bottom-24 left-24 w-28 h-28 bg-gradient-to-br from-red-600 to-red-800 blob" style={{ animationDelay: '9s' }} />
       <div className="absolute bottom-28 right-1/3 w-24 h-24 bg-gradient-to-br from-red-800 to-red-950 blob" style={{ animationDelay: '12s' }} />
       
-      <div className="relative z-10 mx-auto px-4 md:px-8 lg:px-16 pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20 lg:pb-24 w-full h-full flex flex-col">
+      <div className="relative z-10 mx-auto px-3 md:px-8 lg:px-12 pt-10 md:pt-24 lg:pt-28 pb-20 md:pb-20 lg:pb-24 w-full flex flex-col">
         <motion.h2
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -92,7 +92,7 @@ export default function CompetitiveAdvantageSlide() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-6 bg-gradient-to-r from-binti-purple to-binti-magenta text-white rounded-2xl p-6"
         >
-          <div className="grid grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">0</div>
               <div className="text-sm opacity-90">Direct Competitors</div>

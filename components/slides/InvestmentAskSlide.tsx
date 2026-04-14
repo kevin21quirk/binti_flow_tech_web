@@ -22,10 +22,10 @@ const milestones = [
 
 export default function InvestmentAskSlide() {
   return (
-    <div className="relative w-full h-full flex flex-col overflow-hidden bg-gradient-to-br from-white via-binti-purple/5 to-binti-cyan/5">
+    <div className="relative w-full min-h-full md:h-full flex flex-col overflow-y-auto md:overflow-hidden bg-gradient-to-br from-white via-binti-purple/5 to-binti-cyan/5">
       <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-binti-purple/20 to-binti-cyan/20 blob" />
       
-      <div className="relative z-10 mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20 lg:pb-24 w-full h-full flex flex-col">
+      <div className="relative z-10 mx-auto px-3 md:px-8 lg:px-12 pt-10 md:pt-24 lg:pt-28 pb-20 md:pb-20 lg:pb-24 w-full flex flex-col">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}

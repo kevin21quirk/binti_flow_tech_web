@@ -21,10 +21,10 @@ const marketSegments = [
 
 export default function MarketOpportunitySlide() {
   return (
-    <div className="relative w-full h-full flex flex-col overflow-hidden bg-white">
+    <div className="relative w-full min-h-full md:h-full flex flex-col overflow-y-auto md:overflow-hidden bg-white">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-binti-purple/5 via-transparent to-binti-cyan/5" />
       
-      <div className="relative z-10 mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20 lg:pb-24 w-full h-full flex flex-col">
+      <div className="relative z-10 mx-auto px-3 md:px-8 lg:px-12 pt-10 md:pt-24 lg:pt-28 pb-20 md:pb-20 lg:pb-24 w-full flex flex-col">
         <motion.h2
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -34,7 +34,7 @@ export default function MarketOpportunitySlide() {
           Market Opportunity
         </motion.h2>
 
-        <div className="grid grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,7 +92,7 @@ export default function MarketOpportunitySlide() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -145,7 +145,7 @@ export default function MarketOpportunitySlide() {
           className="mt-4 bg-gradient-to-r from-gray-50 to-binti-purple/5 rounded-xl p-4 border-2 border-gray-200"
         >
           <h3 className="text-lg font-bold mb-2 text-gray-900">Target Markets</h3>
-          <div className="grid grid-cols-3 gap-4 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 text-sm">
             <div>
               <div className="font-semibold text-binti-purple mb-1">Primary: UK & Europe</div>
               <div className="text-gray-600">150M women, high health awareness</div>

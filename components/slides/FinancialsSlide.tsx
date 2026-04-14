@@ -21,10 +21,10 @@ const userGrowth = [
 
 export default function FinancialsSlide() {
   return (
-    <div className="relative w-full h-full flex flex-col overflow-hidden bg-white">
+    <div className="relative w-full min-h-full md:h-full flex flex-col overflow-y-auto md:overflow-hidden bg-white">
       <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-gray-50 to-white" />
       
-      <div className="relative z-10 mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20 lg:pb-24 w-full h-full flex flex-col">
+      <div className="relative z-10 mx-auto px-3 md:px-8 lg:px-12 pt-10 md:pt-24 lg:pt-28 pb-20 md:pb-20 lg:pb-24 w-full flex flex-col">
         <motion.h2
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -34,7 +34,7 @@ export default function FinancialsSlide() {
           Financial Projections
         </motion.h2>
 
-        <div className="grid grid-cols-2 gap-4 mb-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-3">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export default function FinancialsSlide() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -139,7 +139,7 @@ export default function FinancialsSlide() {
           className="mt-3 bg-gradient-to-r from-gray-50 to-binti-purple/5 rounded-lg p-3 border-2 border-gray-200"
         >
           <h3 className="text-base font-bold mb-2 text-gray-900">Key Assumptions</h3>
-          <div className="grid grid-cols-3 gap-3 text-xs">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3 text-xs">
             <div>
               <div className="font-semibold text-binti-purple mb-1">Market Penetration</div>
               <div className="text-gray-600">0.5% UK market by Year 3</div>

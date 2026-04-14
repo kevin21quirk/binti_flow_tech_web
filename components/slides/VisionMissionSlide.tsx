@@ -39,7 +39,7 @@ const missionPoints = [
 
 export default function VisionMissionSlide() {
   return (
-    <div className="relative w-full h-full flex flex-col overflow-hidden bg-white">
+    <div className="relative w-full min-h-full md:h-full flex flex-col overflow-y-auto md:overflow-hidden bg-white">
       <div className="absolute top-0 right-0 w-[600px] h-full bg-gradient-to-l from-binti-magenta/20 to-transparent" />
       <div className="absolute top-16 left-16 w-28 h-28 bg-gradient-to-br from-red-700 to-red-900 blob" />
       <div className="absolute top-20 left-1/3 w-32 h-32 bg-gradient-to-br from-red-600 to-red-800 blob" style={{ animationDelay: '4s' }} />
@@ -56,7 +56,7 @@ export default function VisionMissionSlide() {
       <div className="absolute bottom-28 left-1/2 w-24 h-24 bg-gradient-to-br from-red-700 to-red-900 blob" style={{ animationDelay: '11s' }} />
       <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-gradient-to-br from-red-600 to-red-800 blob" style={{ animationDelay: '15s' }} />
       
-      <div className="relative z-10 mx-auto px-4 md:px-8 lg:px-16 pt-20 md:pt-24 lg:pt-28 pb-4 md:pb-6 lg:pb-8 w-full h-full flex flex-col">
+      <div className="relative z-10 mx-auto px-3 md:px-8 lg:px-16 pt-10 md:pt-24 lg:pt-28 pb-20 md:pb-6 lg:pb-8 w-full flex flex-col">
         <motion.h2
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}

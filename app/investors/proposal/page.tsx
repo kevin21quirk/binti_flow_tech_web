@@ -78,48 +78,51 @@ export default function InvestmentProposal() {
   const CurrentSlideComponent = slides[currentSlide]
 
   return (
-    <main className="fixed inset-0 w-full h-screen overflow-hidden bg-white z-[9999]">
-      <div className="w-full h-full" style={{ transform: 'scale(0.75)', transformOrigin: 'top left', width: '133.33%', height: '133.33%' }}>
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5 }}
-            className="w-full h-full"
-          >
-            <SlideEnlargeWrapper>
-              <CurrentSlideComponent />
-            </SlideEnlargeWrapper>
-          </motion.div>
-        </AnimatePresence>
+    <main className="fixed inset-0 w-full h-screen bg-white z-[9999] flex flex-col">
+      {/* Desktop: scale down to fit. Mobile: allow scrolling */}
+      <div className="flex-1 overflow-y-auto md:overflow-hidden">
+        <div className="w-full min-h-full md:h-full md:w-[133.33%] md:h-[133.33%] md:origin-top-left md:scale-[0.75]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className="w-full min-h-full md:h-full"
+            >
+              <SlideEnlargeWrapper>
+                <CurrentSlideComponent />
+              </SlideEnlargeWrapper>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
 
       <button
         onClick={prevSlide}
-        className="absolute left-8 top-1/2 -translate-y-1/2 z-50 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+        className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-50 bg-white/80 hover:bg-white p-2 md:p-3 rounded-full shadow-lg transition-all"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6 text-gray-800" />
+        <ChevronLeft className="w-4 h-4 md:w-6 md:h-6 text-gray-800" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-8 top-1/2 -translate-y-1/2 z-50 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+        className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-50 bg-white/80 hover:bg-white p-2 md:p-3 rounded-full shadow-lg transition-all"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6 text-gray-800" />
+        <ChevronRight className="w-4 h-4 md:w-6 md:h-6 text-gray-800" />
       </button>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-50 flex gap-2">
+      <div className="absolute bottom-2 md:bottom-8 left-1/2 -translate-x-1/2 z-50 flex gap-1 md:gap-2 flex-wrap justify-center max-w-[90vw]">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
+            className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all ${
               index === currentSlide
-                ? 'bg-binti-purple w-8'
+                ? 'bg-binti-purple w-4 md:w-8'
                 : 'bg-gray-300 hover:bg-gray-400'
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -127,7 +130,7 @@ export default function InvestmentProposal() {
         ))}
       </div>
 
-      <div className="absolute top-8 right-8 z-50 text-sm text-gray-500">
+      <div className="absolute top-2 right-2 md:top-8 md:right-8 z-50 text-xs md:text-sm text-gray-500">
         {currentSlide + 1} / {slides.length}
       </div>
     </main>

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function HeroSlide() {
   return (
-    <div className="relative w-full h-full flex flex-col items-center justify-start overflow-hidden bg-white pt-20">
+    <div className="relative w-full min-h-full md:h-full flex flex-col items-center justify-start overflow-y-auto md:overflow-hidden bg-white pt-10 md:pt-20">
       <div className="absolute top-12 left-16 w-28 h-28 bg-gradient-to-br from-red-700 to-red-900 blob" />
       <div className="absolute top-24 left-1/4 w-32 h-32 bg-gradient-to-br from-red-800 to-red-950 blob" style={{ animationDelay: '3s' }} />
       <div className="absolute top-16 left-1/2 w-24 h-24 bg-gradient-to-br from-red-600 to-red-800 blob" style={{ animationDelay: '6s' }} />

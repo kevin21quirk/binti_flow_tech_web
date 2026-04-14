@@ -62,7 +62,7 @@ const features = [
 
 export default function SolutionSlide() {
   return (
-    <div className="relative w-full h-full flex flex-col overflow-hidden bg-gradient-to-br from-white via-rose-50/30 to-red-50/20">
+    <div className="relative w-full min-h-full md:h-full flex flex-col overflow-y-auto md:overflow-hidden bg-gradient-to-br from-white via-rose-50/30 to-red-50/20">
       <div className="absolute top-16 left-20 w-28 h-28 bg-gradient-to-br from-red-700 to-red-900 blob" />
       <div className="absolute top-20 left-1/3 w-32 h-32 bg-gradient-to-br from-red-600 to-red-800 blob" style={{ animationDelay: '5s' }} />
       <div className="absolute top-24 right-1/3 w-24 h-24 bg-gradient-to-br from-red-800 to-red-950 blob" style={{ animationDelay: '10s' }} />
@@ -78,7 +78,7 @@ export default function SolutionSlide() {
       <div className="absolute bottom-28 left-1/2 w-24 h-24 bg-gradient-to-br from-red-700 to-red-900 blob" style={{ animationDelay: '9s' }} />
       <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-gradient-to-br from-red-600 to-red-800 blob" style={{ animationDelay: '14s' }} />
       
-      <div className="relative z-10 mx-auto px-4 md:px-8 lg:px-16 pt-20 md:pt-24 lg:pt-28 pb-8 md:pb-10 lg:pb-12 w-full h-full flex flex-col">
+      <div className="relative z-10 mx-auto px-3 md:px-8 lg:px-16 pt-10 md:pt-24 lg:pt-28 pb-20 md:pb-10 lg:pb-12 w-full flex flex-col">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
