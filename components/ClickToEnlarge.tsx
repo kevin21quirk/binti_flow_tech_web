@@ -67,7 +67,7 @@ export default function SlideEnlargeWrapper({ children }: SlideEnlargeWrapperPro
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.5, opacity: 0 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="relative bg-white rounded-2xl shadow-2xl p-8 max-w-[70vw] max-h-[80vh] overflow-auto"
+              className="relative bg-white rounded-2xl shadow-2xl p-10 min-w-[50vw] max-w-[85vw] max-h-[85vh] overflow-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -79,7 +79,7 @@ export default function SlideEnlargeWrapper({ children }: SlideEnlargeWrapperPro
               </button>
               <div
                 className="enlarged-content"
-                style={{ fontSize: '1.4em', lineHeight: '1.6' }}
+                style={{ fontSize: '2em', lineHeight: '1.7', padding: '1rem' }}
                 dangerouslySetInnerHTML={{ __html: clonedHTML }}
               />
             </motion.div>
