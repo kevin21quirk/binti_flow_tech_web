@@ -27,7 +27,7 @@ export default function Home() {
     {
       icon: TrendingUp,
       title: 'AI-Powered Analytics',
-      description: 'Machine learning algorithms analyze patterns and provide personalised health recommendations.',
+      description: 'Machine learning algorithms analyse patterns and provide personalised health recommendations.',
       color: 'from-gray-700 to-gray-500'
     }
   ]
@@ -68,6 +68,15 @@ export default function Home() {
             className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"
           >
             Intelligent menstrual monitoring with AI-powered diagnostics and biomarker detection
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"
+          >
+            Your personal menstrual health companion. Track, analyse, and understand your cycle like never before with AI-powered insights and smart pad integration.
           </motion.p>
 
           <motion.div

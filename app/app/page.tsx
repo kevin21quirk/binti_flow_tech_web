@@ -14,7 +14,7 @@ export default function AppPage() {
     {
       icon: Activity,
       title: 'Pain Management',
-      description: 'Track pain levels, identify triggers, and receive personalized recommendations for relief.',
+      description: 'Track pain levels, identify triggers, and receive personalised recommendations for relief.',
       color: 'from-binti-red to-pink-600'
     },
     {

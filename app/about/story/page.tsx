@@ -48,7 +48,7 @@ export default function Story() {
               </p>
               
               <p>
-                Through the work of Binti International, a charity dedicated to providing menstrual health products to women in need, a groundbreaking realization emerged: menstrual blood could be the key to solving critical health challenges. While distributing essential menstrual products to underserved communities, the charity recognized that this natural biological process held untapped potential for early disease detection and health monitoring.
+                Through the work of Binti International, a charity dedicated to providing menstrual health products to women in need, a groundbreaking realisation emerged: menstrual blood could be the key to solving critical health challenges. While distributing essential menstrual products to underserved communities, the charity recognised that this natural biological process held untapped potential for early disease detection and health monitoring.
               </p>
 
               <p>

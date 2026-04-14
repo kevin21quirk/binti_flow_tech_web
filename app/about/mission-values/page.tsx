@@ -72,7 +72,7 @@ export default function MissionValues() {
               </div>
               <h2 className="text-3xl font-bold mb-4 text-black">Our Mission</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                To empower women globally with accessible, intelligent menstrual health monitoring technology that provides early disease detection and personalized health insights.
+                To empower women globally with accessible, intelligent menstrual health monitoring technology that provides early disease detection and personalised health insights.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 We believe every woman deserves access to advanced health technology that respects her dignity while providing life-saving early warnings.
